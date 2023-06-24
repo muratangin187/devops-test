@@ -17,3 +17,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script: sudo /home/muratangin/deploy.sh ${{ github.head_ref }}
+    - uses: mshick/add-pr-comment@v2
+      with:
+        message: |
+          You can access the test deployment from **https://${{ github.head_ref }}.muratangin.com **
